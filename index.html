@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <form name="form">
+        <div class="display">
+            <input type="text" placeholder="0" name="displayResult" />
+        </div>
+            <div class="buttons">
+                <div class="row">
+                    <input type="button" name="bce" value="C">
+                      <input type="button" name="c" value="CE" >
+                      <input type="button" name="mul" value="*" >
+                      <input type="button" name="div" value="/" >
+                </div>
+              <div class="row">
+                <input type="button" name="b7" value="7" >
+                  <input type="button" name="b8" value="8" >
+                  <input type="button" name="b9" value="9" >
+                  <input type="button" name="addb" value="+" >
+                </div>
+    
+                <div class="row">
+                <input type="button" name="b4" value="4" >
+                  <input type="button" name="b5" value="5" >
+                  <input type="button" name="b6" value="6" >
+                  <input type="button" name="subb" value="-" >
+                </div>
+    
+                <div class="row">
+                <input type="button" name="b1" value="1">
+                  <input type="button" name="b2" value="2">
+                  <input type="button" name="b3" value="3">
+                  <input type="button" name="mulb" value="*">
+                </div>
+    
+                <div class="row">
+                <input type="button" name="b0" value="0">
+                  <input type="button" name="potb" value=".">
+                  <input type="button" name="divb" value="/">
+                  <input type="button" class="red" value="=" onClick="displayResult.value=eval(displayResult.value)">
+                </div>
+            </div>
+    
+        </form>
+    </div>
+
+
+</body>
+</html>
