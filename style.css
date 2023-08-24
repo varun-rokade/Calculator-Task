@@ -34,7 +34,7 @@ h1{
  width: 280px;
  float: left;
 }
-input[type=button] {
+button[type=button] {
  width: 60px;
  height: 60px;
  float: left;
