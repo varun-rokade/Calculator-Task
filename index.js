@@ -19,9 +19,7 @@ buttons.forEach((button) => {
       }
     } else if (buttonValue == "CE") {
       clearFunction();
-    } else if (buttonValue == "C") {
-      // clearFunction()
-    } else {
+    }else {
       displayResult.value += buttonValue;
     }
   });
@@ -67,10 +65,8 @@ function evaluateExpression(expression) {
         values.push(operators[operator](a, b));
       }
       operatorsStack.push(token);
-    } else if (token === "(") {
-      return false;
-    } else if (token === ")") {
-      return false;
+    } else {
+        return false
     }
   });
 
@@ -85,9 +81,18 @@ function evaluateExpression(expression) {
   return values[0];
 }
 
-const hamburgerButton = document.querySelector("#hamburger");
+const hamburgerButton = document.getElementById("hamburger");
 const calculatorContainer = document.querySelector(".container");
-
+const historyPanel = document.getElementById('history-panel')
+historyPanel.style.display = 'none'
 hamburgerButton.addEventListener("click", () => {
-  calculatorContainer.classList.toggle("hidden");
+    // alert('button clicked')
+  historyPanel.style.display = 'block'
+  if(displayResult.value == 0) {
+    return
+  } else {
+      const historyLi = document.createElement("li")
+      historyLi.textContent = displayResult.value
+      historyPanel.appendChild(historyLi)
+  }
 });
